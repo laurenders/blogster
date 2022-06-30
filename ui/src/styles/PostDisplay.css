@@ -1,0 +1,11 @@
+.post-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  gap: 20px;
+  padding: 10px;
+  margin: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-y: hidden;
+}

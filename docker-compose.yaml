@@ -1,0 +1,43 @@
+services:
+
+  ui-blog:
+    build: ./ui
+    container_name: ui-blog
+    ports: 
+      - 3000:3000
+    depends_on:
+      - api-blog
+    volumes:
+      - ./ui:/app
+
+  api-blog:
+    build: ./api
+    container_name: api-blog
+    ports: 
+      - 3001:3001
+    depends_on:
+      - db-blog
+    environment:
+      - PORT=3001
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=blog
+      - POSTGRES_HOST=db-blog
+      - POSTGRES_PORT=5432
+    volumes:
+      - ./api:/app
+    command: npm run start:dev
+
+  db-blog:
+    image: postgres:alpine
+    container_name: db-blog
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=blog
+      - POSTGRES_PORT=5432
+    volumes:
+      - ./db:/var/lib/postgresql/data
+
