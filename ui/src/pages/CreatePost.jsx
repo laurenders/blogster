@@ -7,6 +7,7 @@ import { useNavigate, Link } from 'react-router-dom'
 const CreatePost = (props) => {
   const bc = useContext(BlogContext)
   const nav = useNavigate()
+  bc.setEditMode(false)
 
   const submitHandler = (e) => {
     let newPost = {

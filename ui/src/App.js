@@ -17,7 +17,8 @@ function App() {
   const [postData, setPostData] = useState([])
   const [user, setUser] = useState({})  // current user
   const [selected, setSelected] = useState({}) // current post 
-  const [serverUrl] = useState(process.env.REACT_APP_SERVER_URL || 'http://localhost:3001') // this is for heroku deployment
+  const [editMode, setEditMode] = useState(false)     // boolean for determining edit mode
+  const [serverUrl] = useState(process.env.REACT_APP_SERVER_URL || 'http://localhost:3001') // for heroku deployment
 
   const refresh = () => {
     fetch(serverUrl+'/api/posts')
@@ -37,6 +38,7 @@ function App() {
     postData, setPostData,
     user, setUser,
     selected, setSelected,
+    editMode, setEditMode,
     refresh,
     serverUrl
   }
@@ -47,8 +49,8 @@ function App() {
     <div className="App">
       <BlogContext.Provider value={BlogContextVals}>
         <Router>
-          <Header />
 
+          <Header />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/posts/:id' element={<PostDetails />} />
