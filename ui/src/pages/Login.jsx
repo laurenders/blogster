@@ -26,7 +26,7 @@ const Login = () => {
       bc.refresh()
       alert(`Welcome back ${data.username}!`)
       bc.setUser(data)
-      nav('/')
+      nav('/myposts')
     })
     .catch(err => {
       console.log(err)

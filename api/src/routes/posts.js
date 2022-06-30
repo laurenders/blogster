@@ -40,6 +40,23 @@ router.get('/:id',  (req, res) => {
     })
 })
 
+// get posts specified by user ID
+router.get('/:userid',  (req, res) => {  
+  knex
+    .select('*')
+    .from('posts')
+    .where('user_id', '=', parseInt(req.params.userid))  // may remove parsint
+    .then(data => res.status(200).json(data[0]))
+
+    .catch(err => {
+      console.log(err)
+      res.status(404).json({
+        message:
+          'There was a problem getting posts for specified user.'
+      })
+    })
+})
+
 //-----------------------------------------------------------------------------------------------------
 // POST
 //----------------------------------------------------------------------------------------------------- 

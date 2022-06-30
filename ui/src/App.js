@@ -7,6 +7,7 @@ import PostDetails from './pages/PostDetails.jsx'
 import Login from './pages/Login.jsx'
 import CreateAccount from './pages/CreateAccount.jsx'
 import CreatePost from './pages/CreatePost.jsx'
+import MyPosts from './pages/MyPosts.jsx'
 import Header from './components/Header.jsx'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -54,6 +55,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<CreateAccount />} />
             <Route path='/createpost' element={<CreatePost />} />
+            <Route path='/myposts' element={<MyPosts />} />
           </Routes>
 
         </Router>

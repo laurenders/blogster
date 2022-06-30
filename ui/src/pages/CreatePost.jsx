@@ -10,7 +10,7 @@ const CreatePost = (props) => {
 
   const submitHandler = (e) => {
     let newPost = {
-      user_id: bc.user.user_id,
+      user_id: bc.user.id,
       title: e.target.title.value,
       content: e.target.content.value
     }
