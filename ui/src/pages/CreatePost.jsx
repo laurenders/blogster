@@ -13,7 +13,8 @@ const CreatePost = (props) => {
     let newPost = {
       user_id: bc.user.id,
       title: e.target.title.value,
-      content: e.target.content.value
+      content: e.target.content.value,
+      created: new Date()
     }
     const request = {
       method: 'POST',
@@ -41,7 +42,7 @@ const CreatePost = (props) => {
     <form onSubmit={e => submitHandler(e)}>
       <label>
         <p>Title:</p>
-        <input type="text" id='title' name='title' />
+        <input className='post-inputs' type="text" id='title' name='title' />
       </label>
       <label>
         <p>Content:</p>

@@ -17,5 +17,43 @@
 .post-details-wrapper {
   margin-left: 20%;
   margin-right: 20%;
+}
 
+.edit-button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(63, 255, 226, 0.803);
+  cursor: pointer;
+  margin: 20px;
+}
+
+.edit-button:hover {
+  background-color:rgb(157, 255, 240);
+  transition: 0.4s;
+}
+
+p {
+  font-weight: bold;
+}
+
+.submit {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+textarea {
+  width: 100%;
+}
+
+.user-id {
+  margin-bottom: 15px;
 }

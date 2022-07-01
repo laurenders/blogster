@@ -15,3 +15,12 @@
 p {
   font-weight: bold;
 }
+
+textarea {
+  width: 50vw;
+  height: 40vh;
+}
+
+.post-inputs {
+  width: 50vw;
+}

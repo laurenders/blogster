@@ -9,9 +9,15 @@ const router = express.Router();
 
 // get ALL posts
 router.get('/', (req, res) => {
-   knex
-    .select('*')
-    .from('posts')
+   knex('posts')
+    .join('users', 'posts.user_id', '=', 'users.id')
+    .select('posts.id as id',
+      'posts.title as title',
+      'posts.content as content',
+      'posts.created as created',
+      'posts.user_id as user_id',
+      'users.username as username'
+    )
     .then(data => res.status(200).json(data))
 
     .catch(err => {
@@ -36,23 +42,6 @@ router.get('/:id',  (req, res) => {
       res.status(404).json({
         message:
           'There was a problem getting this post.'
-      })
-    })
-})
-
-// get posts specified by user ID
-router.get('/:userid',  (req, res) => {  
-  knex
-    .select('*')
-    .from('posts')
-    .where('user_id', '=', parseInt(req.params.userid))  // may remove parsint
-    .then(data => res.status(200).json(data[0]))
-
-    .catch(err => {
-      console.log(err)
-      res.status(404).json({
-        message:
-          'There was a problem getting posts for specified user.'
       })
     })
 })

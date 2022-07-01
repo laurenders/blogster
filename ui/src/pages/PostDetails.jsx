@@ -65,21 +65,18 @@ const PostDetails = () => {
       <h3>
         {bc.selected.title}
       </h3>
-      <span>Created on: {(new Date(bc.selected.created)).toLocaleDateString()}</span>
-      <span>User ID: {bc.selected.user_id}</span>
+      <span>Posted: {(new Date(bc.selected.created)).toLocaleDateString()}</span>
+      <br/>
+      <span>Author: {bc.selected.username}</span>
+      <br/><br/>
       <div className='content-wrapper'>
         {bc.selected.content}
       </div>
       {
-        bc.user.id !== undefined ?
+        bc.user.id !== undefined && bc.selected.user_id === bc.user.id ?
         <span className='button-wrapper'>
           <button className='delete-button' onClick={deleteHandler}>Delete</button>
-          {
-            bc.selected.user_id === bc.user.id ?
-            <button className='edit-button' onClick={editModeToggle}>Edit</button>
-            :
-            ''
-          }
+          <button className='edit-button' onClick={editModeToggle}>Edit</button>
         </span>
         :
         ''
@@ -89,10 +86,12 @@ const PostDetails = () => {
     <div className='post-details-wrapper'>
       <form onSubmit={submitHandler}>
         <h3>
-          <input type='text' id='title' name='title' defaultValue={bc.selected.title} />
+          <input className='post-inputs' type='text' id='title' name='title' defaultValue={bc.selected.title} />
         </h3>
+        <span>Posted: {(new Date(bc.selected.created)).toLocaleDateString()}</span>
+        <span className='user-id'>Author: {bc.selected.username}</span>
         <textarea type='text' id='content' name='content'defaultValue={bc.selected.content}/>
-        <input type='submit' value='Submit Edits' />
+        <input className='submit' type='submit' value='Submit Edits' />
       </form>
     </div>
 

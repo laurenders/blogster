@@ -1,26 +1,14 @@
 body {
-  background-color: #332f5f;
+  background-color: #29285b;
 }
 
 .App {
   text-align: center;
-  color: rgba(245, 245, 245, 0.776);
+  color: rgba(245, 245, 245, 0.892);
   margin-top: 90px;
   padding-top: 10px;
   align-items: center;
 
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
 }
 
 .blogster-link {
