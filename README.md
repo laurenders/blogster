@@ -9,7 +9,7 @@ This application produces a mini blog with a variety of features. These include 
 ![screen-capture](./screen-capture.png)
 
 ## Installation
-Fork and clone this github repo: https://github.com/lenders-game/blogster
+Fork and clone this github repo: https://github.com/lenders-game/blogster \
 Make sure you have Docker and Docker Compose installed. See below for more dependencies.\
 In the api directory: `npm i`\
 In the ui directory: `npm i`\
