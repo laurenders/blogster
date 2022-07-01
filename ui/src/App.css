@@ -1,5 +1,14 @@
+body {
+  background-color: #332f5f;
+}
+
 .App {
   text-align: center;
+  color: rgba(245, 245, 245, 0.776);
+  margin-top: 90px;
+  padding-top: 10px;
+  align-items: center;
+
 }
 
 .App-header {
@@ -20,3 +29,4 @@
   font-size: 40px;
   font-family: 'Courier New', Courier, monospace
 }
+

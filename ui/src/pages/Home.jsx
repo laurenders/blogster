@@ -10,7 +10,7 @@ const Home = () => {
 
     return (
       <div className='homepage-wrapper'>
-        <PostDisplay />
+        <PostDisplay posts={bc.postData} />
       </div>
     )
 }

@@ -1,9 +1,10 @@
 .post-display {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  border: 1px solid black;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
   padding: 10px;
   margin: 10px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

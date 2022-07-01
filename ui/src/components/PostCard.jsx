@@ -23,7 +23,7 @@ const PostCard = (props) => {
       <div className='post-content'>
         {props.post.content.length > 100 ? props.post.content.substring(0, 100)+'...' : props.post.content}
       </div>
-      <Link to={`/posts/${props.post.id}`} onClick={clickHandler}>See More</Link>
+      <Link to={`/posts/${props.post.id}`} onClick={clickHandler}>Read More</Link>
     </div>
   )
 

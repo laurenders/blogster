@@ -28,7 +28,7 @@ const CreateAccount = () => {
       bc.refresh()
       alert(`Account creation successful for ${data.username}!`)
       bc.setUser(data)
-      nav('/')
+      nav('/myposts')
     })
     .catch(err => {
       console.log(err)
@@ -57,7 +57,7 @@ const CreateAccount = () => {
           <input type="password" id='password' name='password' />
         </label>
         <div>
-          <button type="submit">Create Account</button>
+          <button type="submit" className='submit'>Create Account</button>
         </div>
       </form>   
     </div>

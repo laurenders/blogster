@@ -27,7 +27,7 @@ const CreatePost = (props) => {
       .then(data => {
         bc.refresh()
         alert('Post successfully created!')
-        nav('/')
+        nav('/myposts')
     })
     .catch(err => {
       console.log(err)
@@ -48,7 +48,7 @@ const CreatePost = (props) => {
         <textarea type="text" id='content' name='content' />
       </label>
       <div>
-        <button type="submit">Create Post</button>
+        <button className='submit' type="submit">Create Post!</button>
       </div>
     </form>   
   </div>

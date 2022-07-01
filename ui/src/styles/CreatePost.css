@@ -1,0 +1,17 @@
+.submit {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(63, 255, 226, 0.803);
+  cursor: pointer;
+  margin: 20px;
+}
+
+.submit:hover {
+  background-color:rgb(157, 255, 240);
+  transition: 0.4s;
+}
+
+p {
+  font-weight: bold;
+}

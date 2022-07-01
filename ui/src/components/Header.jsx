@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div className='header'>
       <Link className='blogster-link' to='/'>Blogster</Link>
-      <span>
+      <span className = 'button-wrapper'>
         {bc.user.id !== undefined ?
         <>
           <button className='nav-button' onClick={() => nav('/myposts')}>My Posts</button>

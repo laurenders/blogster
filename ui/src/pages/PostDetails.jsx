@@ -20,9 +20,9 @@ const PostDetails = () => {
     fetch(bc.serverUrl+'/api/posts/', request)
       .then(res => res.json())
       .then(data => {
+        alert('Post deleted')
         bc.refresh()
         nav('/myposts')
-        alert('Post deleted')
       })
       .catch(err => console.log(err))
   }

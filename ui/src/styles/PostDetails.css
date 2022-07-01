@@ -1,0 +1,21 @@
+.delete-button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgb(204, 24, 0);
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.delete-button:hover {
+  background-color:rgb(173, 22, 2);
+  transition: 0.3s;
+}
+
+.post-details-wrapper {
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
