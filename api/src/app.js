@@ -16,7 +16,7 @@ const migrateAndSeed = async () => {
   await knex.seed.run()
   console.log('Database setup complete!')
 }
-// migrateAndSeed()
+migrateAndSeed()
 
 // check that our API is up and running
 app.get('/', async (req, res) => {
